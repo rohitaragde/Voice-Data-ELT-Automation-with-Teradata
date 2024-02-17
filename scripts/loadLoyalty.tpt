@@ -1,0 +1,66 @@
+DEFINE JOB Load_Loyalty_Stg
+DESCRIPTION 'Loading Loyalty Stg'
+(
+	DEFINE SCHEMA Loyalty
+	(
+		Sbscrbr VARCHAR(20),
+ 		User_Id VARCHAR(50),
+ 		Loyalty_Badge VARCHAR(5),
+ 		Loyalty_Spent VARCHAR(5),
+ 		Loyalty_Accrue VARCHAR(5),
+ 		Reg_date_time VARCHAR(20)
+	);
+	
+	DEFINE OPERATOR File_Reader
+        TYPE DATACONNECTOR PRODUCER
+        SCHEMA Loyalty
+        ATTRIBUTES
+        (
+                VARCHAR FileName = '../../Landing/Loyalty_file.csv',
+                VARCHAR FORMAT = 'DELIMITED',
+                VARCHAR TextDelimiter = ',',
+                VARCHAR AcceptExcessColumns = 'Y',
+                VARCHAR IndicatorMode = 'N',
+                VARCHAR OpenMode = 'Read'
+        );
+
+	DEFINE OPERATOR Load_Loyalty
+        TYPE LOAD
+        SCHEMA Loyalty
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128',
+                INTEGER MaxSessions = 8,
+                VARCHAR TargetTable = 'STG_LOYALTY'
+        );
+
+	DEFINE OPERATOR DDL_Operator
+        DESCRIPTION 'Empty Table Before Load'
+        TYPE DDL
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128'
+        );
+
+        Step DeleteRows
+        (
+                APPLY ('DELETE STG_LOYALTY;') TO OPERATOR (DDL_Operator[1]);
+        );
+
+        Step LoadRows
+        (
+                APPLY ('INSERT INTO STG_LOYALTY( Sbscrbr, User_Id,
+                Loyalty_Badge, Loyalty_Spent, Loyalty_Accrue,
+                Reg_date_time)
+                VALUES ( :Sbscrbr, :User_Id, :Loyalty_Badge, 
+		:Loyalty_Spent, :Loyalty_Accrue, :Reg_date_time);')
+                TO OPERATOR (Load_Loyalty[1])
+
+                SELECT Sbscrbr, User_Id, Loyalty_Badge,
+                        Loyalty_Spent, Loyalty_Accrue, Reg_date_time  FROM OPERATOR(File_Reader[1]);
+        );
+);

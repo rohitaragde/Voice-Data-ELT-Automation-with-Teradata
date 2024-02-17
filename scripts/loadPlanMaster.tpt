@@ -1,0 +1,73 @@
+DEFINE JOB Load_Plan_Master_stg
+DESCRIPTION 'Loading plan master stage'
+(
+
+	DEFINE SCHEMA Plan_Master
+	(
+		Plan_Type VARCHAR(20),
+      		Plan_Description VARCHAR(50),
+      		Data_Rate_Per_Kb VARCHAR(10),
+      		Free_Voice_Minutes VARCHAR(20),
+      		Free_Sms VARCHAR(20),
+      		Rate_Per_Minute VARCHAR(20),
+      		Sms_Rate VARCHAR(20)
+	);
+
+	DEFINE OPERATOR File_Reader
+        TYPE DATACONNECTOR PRODUCER
+        SCHEMA Plan_Master
+        ATTRIBUTES
+        (
+                VARCHAR FileName = '../../Landing/Plan_Master.csv',
+                VARCHAR FORMAT = 'DELIMITED',
+                VARCHAR TextDelimiter = ',',
+                VARCHAR AcceptExcessColumns = 'Y',
+                VARCHAR IndicatorMode = 'N',
+                VARCHAR OpenMode = 'Read'
+        );
+
+	DEFINE OPERATOR Load_Plan_Master
+        TYPE LOAD
+        SCHEMA Plan_Master
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128',
+                INTEGER MaxSessions = 8,
+                VARCHAR TargetTable = 'STG_PLAN_MASTER'
+        );
+	
+	DEFINE OPERATOR DDL_Operator
+        DESCRIPTION 'Empty Table Before Load'
+        TYPE DDL
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128'
+        );
+
+        Step DeleteRows
+        (
+                APPLY ('DELETE STG_PLAN_MASTER;') TO OPERATOR (DDL_Operator[1]);
+        );
+
+        Step LoadRows
+        (
+                APPLY ('INSERT INTO STG_PLAN_MASTER(Plan_Type,
+                Plan_Description, Data_Rate_Per_Kb, Free_Voice_Minutes,
+		Free_Sms, Rate_Per_Minute, Sms_Rate)
+                VALUES (:Plan_Type, :Plan_Description, :Data_Rate_Per_Kb, 
+		:Free_Voice_Minutes, :Free_Sms, :Rate_Per_Minute, 
+		:Sms_Rate);')
+                TO OPERATOR (Load_Plan_Master[1])
+
+                SELECT Plan_Type, Plan_Description, Data_Rate_Per_Kb, 
+		Free_Voice_Minutes, Free_Sms, Rate_Per_Minute,
+	 	Sms_Rate FROM OPERATOR(File_Reader[1]);
+        );
+
+
+
+);

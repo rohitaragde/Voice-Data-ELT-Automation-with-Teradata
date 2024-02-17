@@ -1,0 +1,69 @@
+DEFINE JOB Load_Cust_Profile_stg
+DESCRIPTION 'Loading cust profile stage'
+(
+	DEFINE SCHEMA Cust_Profile
+	(
+		Sbscrbr VARCHAR(20),
+		User_Id VARCHAR(50),
+		Gender VARCHAR(10),
+		Status VARCHAR(20),
+		DOB VARCHAR(20),
+		Address VARCHAR(100),
+		State_CD VARCHAR(100)
+	);
+	
+	DEFINE OPERATOR File_Reader
+        TYPE DATACONNECTOR PRODUCER
+        SCHEMA Cust_Profile
+        ATTRIBUTES
+        (
+                VARCHAR FileName = '../Landing/Cust_Prfl.csv',
+                VARCHAR FORMAT = 'DELIMITED',
+                VARCHAR TextDelimiter = ',',
+		VARCHAR AcceptExcessColumns = 'Y',
+                VARCHAR IndicatorMode = 'N',
+                VARCHAR OpenMode = 'Read'
+        );
+
+	DEFINE OPERATOR Load_Cust_Profile
+        TYPE LOAD
+        SCHEMA Cust_Profile
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128',
+                INTEGER MaxSessions = 8,
+                VARCHAR TargetTable = 'STG_CUST_PRFL'
+        );
+
+	DEFINE OPERATOR DDL_Operator
+        DESCRIPTION 'Empty Table Before Load'
+        TYPE DDL
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128'
+        );
+
+	Step DeleteRows
+        (
+                APPLY ('DELETE STG_CUST_PRFL;') TO OPERATOR (DDL_Operator[1]);
+        );
+
+        Step LoadRows
+        (
+                APPLY ('INSERT INTO STG_CUST_PRFL( Sbscrbr,
+                        User_Id, Gender, Status,
+                        DOB, Address, State_CD)
+                VALUES (:Sbscrbr, :User_Id, :Gender,
+                        :Status, :DOB, :Address, :State_CD);')
+                TO OPERATOR (Load_Cust_Profile[1])
+
+                SELECT Sbscrbr, User_Id, Gender,
+                        Status, DOB, Address, State_CD  FROM OPERATOR(File_Reader[1]);
+        );
+
+
+);

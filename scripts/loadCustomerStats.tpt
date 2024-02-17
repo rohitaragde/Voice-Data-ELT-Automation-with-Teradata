@@ -1,0 +1,60 @@
+DEFINE JOB Load_Cust_Stats_stg
+DESCRIPTION 'Loading Cust Stats Stage'
+(
+	DEFINE SCHEMA Cust_Stats
+	(
+		Sbscrbr VARCHAR(20),
+		Paid_Date VARCHAR(20)
+	);
+
+	DEFINE OPERATOR File_Reader
+        TYPE DATACONNECTOR PRODUCER
+        SCHEMA Cust_Stats
+        ATTRIBUTES
+        (
+                VARCHAR FileName = '../../Landing/Cust_Stats.csv',
+                VARCHAR FORMAT = 'DELIMITED',
+                VARCHAR TextDelimiter = ',',
+		VARCHAR AcceptExcessColumns = 'Y',
+                VARCHAR IndicatorMode = 'N',
+                VARCHAR OpenMode = 'Read'
+        );
+
+	DEFINE OPERATOR Load_Cust_Stats
+        TYPE LOAD
+        SCHEMA Cust_Stats
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128',
+                INTEGER MaxSessions = 8,
+                VARCHAR TargetTable = 'STG_CUST_STATS'
+        );
+
+	DEFINE OPERATOR DDL_Operator
+        DESCRIPTION 'Empty Table Before Load'
+        TYPE DDL
+        ATTRIBUTES
+        (
+                VARCHAR UserName = 'Students',
+                VARCHAR UserPassword = 'learning',
+                VARCHAR Tdpid = '192.168.235.128'
+        );
+
+	Step DeleteRows
+        (
+                APPLY ('DELETE STG_CUST_STATS;') TO OPERATOR (DDL_Operator[1]);
+        );
+
+        Step LoadRows
+        (
+                APPLY ('INSERT INTO STG_CUST_STATS( Sbscrbr,
+                        Paid_Date)
+                VALUES (:Sbscrbr, :Paid_Date);')
+                TO OPERATOR (Load_Cust_Stats[1])
+
+                SELECT Sbscrbr, Paid_Date  FROM OPERATOR(File_Reader[1]);
+        );
+
+);

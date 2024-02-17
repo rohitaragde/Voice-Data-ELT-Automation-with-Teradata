@@ -1,0 +1,3 @@
+.LOGON dbc/Students, learning;
+EXEC StgToTrn;
+.QUIT
