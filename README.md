@@ -4,13 +4,13 @@ This repository contains the code and resources for the Slipstream project, whic
 
 **Data Model**
 
-The data model below shows the architecture of the slipsteam ELT project we performed here.
+The data model below shows the architecture of the slipsteam ELT project on the customer's voice and data plans we performed the ELT operation on using Teradata BTEQ and TPT utilities:-
 
 ![Data Model](Final_Data_Model.png)
 
 **ELT Process**
 
-The ELT process involves the following steps:<br><br>
+The ELT process involves the following steps:<br>
 **Extract:** Data is extracted from the Slipstream dataset.<br>
 **Load:** The extracted data is loaded into Teradata tables using BTEQ and TPT scripts.<br>
 **Transform:** Data transformations are performed to address any data issues and enhance the quality of the data.<br>
