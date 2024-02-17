@@ -10,5 +10,8 @@ The data model below shows the architecture of the slipsteam ELT project we perf
 
 ![Data Model](slipstream/Final Data_Model.png) 
 
+![Data Model](slipstream/Final Data_model.png)
+
+
 
 
