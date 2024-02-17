@@ -1,0 +1,5 @@
+Plan_type,Plan Description,Data_rate_per_kb, free_voice_minutes, free_sms, rate_per_minute,sms_rate
+PLN-50,Cheapest Plan,2,15,50,1,2
+PLN-100,Students Plan,1.8,30,100,0.8,1.5
+PLN-500,Freshers Plan,1.5,45,200,0.5,1
+PLN-2K,Mobile Users,1,180,NULL,0.3,0
