@@ -6,6 +6,7 @@ This repository contains the code and resources for the Slipstream project, whic
 
 The data model below shows the architecture of the slipsteam ELT project we performed here.
 
-![Alt text](Final Data_model.png)
+![Data Model](Final Data_model.png)
+
 
 
