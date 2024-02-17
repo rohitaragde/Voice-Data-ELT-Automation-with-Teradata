@@ -1,0 +1,325 @@
+Teradata Parallel Transporter Version 16.20.00.09 64-Bit
+The global configuration file '/opt/teradata/client/16.20/tbuild/twbcfg.ini' is used.
+   Log Directory: /opt/teradata/client/16.20/tbuild/logs
+   Checkpoint Directory: /opt/teradata/client/16.20/tbuild/checkpoint
+
+Job log: /opt/teradata/client/16.20/tbuild/logs/root-105.out
+Job id is root-105, running on TDExpress1620_Sles11
+Teradata Parallel Transporter SQL DDL Operator Version 16.20.00.09
+DDL_Operator: private log not specified
+DDL_Operator: connecting sessions
+DDL_Operator: sending SQL requests
+DDL_Operator: Rows Deleted:  0
+DDL_Operator: disconnecting sessions
+DDL_Operator: Total processor time used = '0.052003 Second(s)'
+DDL_Operator: Start : Wed Nov  6 05:16:24 2019
+DDL_Operator: End   : Wed Nov  6 05:16:24 2019
+Job step DeleteRows completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 16.20.00.09
+File_Reader[1]: Instance 1 directing private log report to 'dtacop-root-30759-1'.
+Teradata Parallel Transporter Load Operator Version 16.20.00.09
+Load_Cust_Profile: private log not specified
+File_Reader[1]: DataConnector Producer operator Instances: 1
+File_Reader[1]: ECI operator ID: 'File_Reader-30759'
+File_Reader[1]: Operator instance 1 processing file '../../Landing/Cust_Prfl.csv'.
+Load_Cust_Profile: connecting sessions
+Load_Cust_Profile: preparing target table
+Load_Cust_Profile: entering Acquisition Phase
+Load_Cust_Profile: entering Application Phase
+Load_Cust_Profile: Statistics for Target Table:  'STG_CUST_PRFL'
+Load_Cust_Profile: Total Rows Sent To RDBMS:      599
+Load_Cust_Profile: Total Rows Applied:            599
+Load_Cust_Profile: Total Rows in Error Table 1:   0
+Load_Cust_Profile: Total Rows in Error Table 2:   0
+Load_Cust_Profile: Total Duplicate Rows:          0
+File_Reader[1]: Total files processed: 1.
+Load_Cust_Profile: disconnecting sessions
+Load_Cust_Profile: Performance metrics:
+Load_Cust_Profile:     MB/sec in Acquisition phase: 0.014
+Load_Cust_Profile:     Elapsed time from start to Acquisition phase:   2 second(s)
+Load_Cust_Profile:     Elapsed time in Acquisition phase:   4 second(s)
+Load_Cust_Profile:     Elapsed time in Application phase: < 1 second
+Load_Cust_Profile:     Elapsed time from Application phase to end: < 1 second
+Load_Cust_Profile: Total processor time used = '0.096006 Second(s)'
+Load_Cust_Profile: Start : Wed Nov  6 05:16:24 2019
+Load_Cust_Profile: End   : Wed Nov  6 05:16:30 2019
+Job step LoadRows completed successfully
+Job root completed successfully
+Job start: Wed Nov  6 05:16:24 2019
+Job end:   Wed Nov  6 05:16:31 2019
+Teradata Parallel Transporter Version 16.20.00.09 64-Bit
+The global configuration file '/opt/teradata/client/16.20/tbuild/twbcfg.ini' is used.
+   Log Directory: /opt/teradata/client/16.20/tbuild/logs
+   Checkpoint Directory: /opt/teradata/client/16.20/tbuild/checkpoint
+
+Job log: /opt/teradata/client/16.20/tbuild/logs/root-106.out
+Job id is root-106, running on TDExpress1620_Sles11
+Teradata Parallel Transporter SQL DDL Operator Version 16.20.00.09
+DDL_Operator: private log not specified
+DDL_Operator: connecting sessions
+DDL_Operator: sending SQL requests
+DDL_Operator: Rows Deleted:  0
+DDL_Operator: disconnecting sessions
+DDL_Operator: Total processor time used = '0.040002 Second(s)'
+DDL_Operator: Start : Wed Nov  6 05:16:32 2019
+DDL_Operator: End   : Wed Nov  6 05:16:32 2019
+Job step DeleteRows completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 16.20.00.09
+File_Reader[1]: Instance 1 directing private log report to 'dtacop-root-30773-1'.
+Teradata Parallel Transporter Load Operator Version 16.20.00.09
+Load_Cust_Stats: private log not specified
+File_Reader[1]: DataConnector Producer operator Instances: 1
+File_Reader[1]: ECI operator ID: 'File_Reader-30773'
+File_Reader[1]: Operator instance 1 processing file '../../Landing/Cust_Stats.csv'.
+Load_Cust_Stats: connecting sessions
+Load_Cust_Stats: preparing target table
+Load_Cust_Stats: entering Acquisition Phase
+Load_Cust_Stats: entering Application Phase
+Load_Cust_Stats: Statistics for Target Table:  'STG_CUST_STATS'
+Load_Cust_Stats: Total Rows Sent To RDBMS:      589
+Load_Cust_Stats: Total Rows Applied:            589
+Load_Cust_Stats: Total Rows in Error Table 1:   0
+Load_Cust_Stats: Total Rows in Error Table 2:   0
+Load_Cust_Stats: Total Duplicate Rows:          0
+File_Reader[1]: Total files processed: 1.
+Load_Cust_Stats: disconnecting sessions
+Load_Cust_Stats: Performance metrics:
+Load_Cust_Stats:     MB/sec in Acquisition phase: 0.005
+Load_Cust_Stats:     Elapsed time from start to Acquisition phase:   2 second(s)
+Load_Cust_Stats:     Elapsed time in Acquisition phase:   3 second(s)
+Load_Cust_Stats:     Elapsed time in Application phase: < 1 second
+Load_Cust_Stats:     Elapsed time from Application phase to end:   1 second(s)
+Load_Cust_Stats: Total processor time used = '0.100006 Second(s)'
+Load_Cust_Stats: Start : Wed Nov  6 05:16:33 2019
+Load_Cust_Stats: End   : Wed Nov  6 05:16:39 2019
+Job step LoadRows completed successfully
+Job root completed successfully
+Job start: Wed Nov  6 05:16:32 2019
+Job end:   Wed Nov  6 05:16:39 2019
+Teradata Parallel Transporter Version 16.20.00.09 64-Bit
+The global configuration file '/opt/teradata/client/16.20/tbuild/twbcfg.ini' is used.
+   Log Directory: /opt/teradata/client/16.20/tbuild/logs
+   Checkpoint Directory: /opt/teradata/client/16.20/tbuild/checkpoint
+
+Job log: /opt/teradata/client/16.20/tbuild/logs/root-107.out
+Job id is root-107, running on TDExpress1620_Sles11
+Teradata Parallel Transporter SQL DDL Operator Version 16.20.00.09
+DDL_Operator: private log not specified
+DDL_Operator: connecting sessions
+DDL_Operator: sending SQL requests
+DDL_Operator: Rows Deleted:  0
+DDL_Operator: disconnecting sessions
+DDL_Operator: Total processor time used = '0.036002 Second(s)'
+DDL_Operator: Start : Wed Nov  6 05:16:40 2019
+DDL_Operator: End   : Wed Nov  6 05:16:41 2019
+Job step DeleteRows completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 16.20.00.09
+Teradata Parallel Transporter Load Operator Version 16.20.00.09
+Load_Loyalty: private log not specified
+File_Reader[1]: Instance 1 directing private log report to 'dtacop-root-30788-1'.
+File_Reader[1]: DataConnector Producer operator Instances: 1
+File_Reader[1]: ECI operator ID: 'File_Reader-30788'
+File_Reader[1]: Operator instance 1 processing file '../../Landing/Loyalty_file.csv'.
+Load_Loyalty: connecting sessions
+Load_Loyalty: preparing target table
+Load_Loyalty: entering Acquisition Phase
+Load_Loyalty: entering Application Phase
+Load_Loyalty: Statistics for Target Table:  'STG_LOYALTY'
+Load_Loyalty: Total Rows Sent To RDBMS:      599
+Load_Loyalty: Total Rows Applied:            599
+Load_Loyalty: Total Rows in Error Table 1:   0
+Load_Loyalty: Total Rows in Error Table 2:   0
+Load_Loyalty: Total Duplicate Rows:          0
+File_Reader[1]: Total files processed: 1.
+Load_Loyalty: disconnecting sessions
+Load_Loyalty: Performance metrics:
+Load_Loyalty:     MB/sec in Acquisition phase: 0.011
+Load_Loyalty:     Elapsed time from start to Acquisition phase:   2 second(s)
+Load_Loyalty:     Elapsed time in Acquisition phase:   3 second(s)
+Load_Loyalty:     Elapsed time in Application phase: < 1 second
+Load_Loyalty:     Elapsed time from Application phase to end:   1 second(s)
+Load_Loyalty: Total processor time used = '0.096006 Second(s)'
+Load_Loyalty: Start : Wed Nov  6 05:16:41 2019
+Load_Loyalty: End   : Wed Nov  6 05:16:47 2019
+Job step LoadRows completed successfully
+Job root completed successfully
+Job start: Wed Nov  6 05:16:40 2019
+Job end:   Wed Nov  6 05:16:47 2019
+Teradata Parallel Transporter Version 16.20.00.09 64-Bit
+The global configuration file '/opt/teradata/client/16.20/tbuild/twbcfg.ini' is used.
+   Log Directory: /opt/teradata/client/16.20/tbuild/logs
+   Checkpoint Directory: /opt/teradata/client/16.20/tbuild/checkpoint
+
+Job log: /opt/teradata/client/16.20/tbuild/logs/root-108.out
+Job id is root-108, running on TDExpress1620_Sles11
+Teradata Parallel Transporter SQL DDL Operator Version 16.20.00.09
+DDL_Operator: private log not specified
+DDL_Operator: connecting sessions
+DDL_Operator: sending SQL requests
+DDL_Operator: Rows Deleted:  0
+DDL_Operator: disconnecting sessions
+DDL_Operator: Total processor time used = '0.040002 Second(s)'
+DDL_Operator: Start : Wed Nov  6 05:16:48 2019
+DDL_Operator: End   : Wed Nov  6 05:16:49 2019
+Job step DeleteRows completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 16.20.00.09
+File_Reader[1]: Instance 1 directing private log report to 'dtacop-root-30802-1'.
+Teradata Parallel Transporter Load Operator Version 16.20.00.09
+Load_Plan_Master: private log not specified
+File_Reader[1]: DataConnector Producer operator Instances: 1
+File_Reader[1]: ECI operator ID: 'File_Reader-30802'
+File_Reader[1]: Operator instance 1 processing file '../../Landing/Plan_Master.csv'.
+Load_Plan_Master: connecting sessions
+Load_Plan_Master: preparing target table
+Load_Plan_Master: entering Acquisition Phase
+Load_Plan_Master: entering Application Phase
+Load_Plan_Master: Statistics for Target Table:  'STG_PLAN_MASTER'
+Load_Plan_Master: Total Rows Sent To RDBMS:      4
+Load_Plan_Master: Total Rows Applied:            4
+Load_Plan_Master: Total Rows in Error Table 1:   0
+Load_Plan_Master: Total Rows in Error Table 2:   0
+Load_Plan_Master: Total Duplicate Rows:          0
+File_Reader[1]: Total files processed: 1.
+Load_Plan_Master: disconnecting sessions
+Load_Plan_Master: Performance metrics:
+Load_Plan_Master:     MB/sec in Acquisition phase: 0.000
+Load_Plan_Master:     Elapsed time from start to Acquisition phase:   1 second(s)
+Load_Plan_Master:     Elapsed time in Acquisition phase:   3 second(s)
+Load_Plan_Master:     Elapsed time in Application phase: < 1 second
+Load_Plan_Master:     Elapsed time from Application phase to end:   1 second(s)
+Load_Plan_Master: Total processor time used = '0.060003 Second(s)'
+Load_Plan_Master: Start : Wed Nov  6 05:16:49 2019
+Load_Plan_Master: End   : Wed Nov  6 05:16:54 2019
+Job step LoadRows completed successfully
+Job root completed successfully
+Job start: Wed Nov  6 05:16:48 2019
+Job end:   Wed Nov  6 05:16:54 2019
+Teradata Parallel Transporter Version 16.20.00.09 64-Bit
+The global configuration file '/opt/teradata/client/16.20/tbuild/twbcfg.ini' is used.
+   Log Directory: /opt/teradata/client/16.20/tbuild/logs
+   Checkpoint Directory: /opt/teradata/client/16.20/tbuild/checkpoint
+
+Job log: /opt/teradata/client/16.20/tbuild/logs/root-109.out
+Job id is root-109, running on TDExpress1620_Sles11
+Teradata Parallel Transporter SQL DDL Operator Version 16.20.00.09
+DDL_Operator: private log not specified
+DDL_Operator: connecting sessions
+DDL_Operator: sending SQL requests
+DDL_Operator: Rows Deleted:  0
+DDL_Operator: disconnecting sessions
+DDL_Operator: Total processor time used = '0.012 Second(s)'
+DDL_Operator: Start : Wed Nov  6 05:16:56 2019
+DDL_Operator: End   : Wed Nov  6 05:16:56 2019
+Job step DeleteRows completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 16.20.00.09
+File_Reader[1]: Instance 1 directing private log report to 'dtacop-root-30817-1'.
+Teradata Parallel Transporter Load Operator Version 16.20.00.09
+Load_Voice_Plan: private log not specified
+File_Reader[1]: DataConnector Producer operator Instances: 1
+File_Reader[1]: ECI operator ID: 'File_Reader-30817'
+File_Reader[1]: Operator instance 1 processing file '../../Landing/Voice_Plan_Run_1.csv'.
+Load_Voice_Plan: connecting sessions
+Load_Voice_Plan: preparing target table
+Load_Voice_Plan: entering Acquisition Phase
+Load_Voice_Plan: entering Application Phase
+Load_Voice_Plan: Statistics for Target Table:  'STG_VOICE_PLAN'
+Load_Voice_Plan: Total Rows Sent To RDBMS:      599
+Load_Voice_Plan: Total Rows Applied:            599
+Load_Voice_Plan: Total Rows in Error Table 1:   0
+Load_Voice_Plan: Total Rows in Error Table 2:   0
+Load_Voice_Plan: Total Duplicate Rows:          0
+File_Reader[1]: Total files processed: 1.
+Load_Voice_Plan: disconnecting sessions
+Load_Voice_Plan: Performance metrics:
+Load_Voice_Plan:     MB/sec in Acquisition phase: 0.009
+Load_Voice_Plan:     Elapsed time from start to Acquisition phase:   1 second(s)
+Load_Voice_Plan:     Elapsed time in Acquisition phase:   3 second(s)
+Load_Voice_Plan:     Elapsed time in Application phase: < 1 second
+Load_Voice_Plan:     Elapsed time from Application phase to end:   1 second(s)
+Load_Voice_Plan: Total processor time used = '0.036002 Second(s)'
+Load_Voice_Plan: Start : Wed Nov  6 05:16:56 2019
+Load_Voice_Plan: End   : Wed Nov  6 05:17:01 2019
+Job step LoadRows completed successfully
+Job root completed successfully
+Job start: Wed Nov  6 05:16:56 2019
+Job end:   Wed Nov  6 05:17:01 2019
+Teradata Parallel Transporter Version 16.20.00.09 64-Bit
+The global configuration file '/opt/teradata/client/16.20/tbuild/twbcfg.ini' is used.
+   Log Directory: /opt/teradata/client/16.20/tbuild/logs
+   Checkpoint Directory: /opt/teradata/client/16.20/tbuild/checkpoint
+
+Job log: /opt/teradata/client/16.20/tbuild/logs/root-110.out
+Job id is root-110, running on TDExpress1620_Sles11
+Teradata Parallel Transporter SQL DDL Operator Version 16.20.00.09
+DDL_Operator: private log not specified
+DDL_Operator: connecting sessions
+DDL_Operator: sending SQL requests
+DDL_Operator: Rows Deleted:  0
+DDL_Operator: disconnecting sessions
+DDL_Operator: Total processor time used = '0.012 Second(s)'
+DDL_Operator: Start : Wed Nov  6 05:17:02 2019
+DDL_Operator: End   : Wed Nov  6 05:17:02 2019
+Job step DeleteRows completed successfully
+Teradata Parallel Transporter Load Operator Version 16.20.00.09
+Load_Data_Plan: private log not specified
+Teradata Parallel Transporter DataConnector Operator Version 16.20.00.09
+File_Reader[1]: Instance 1 directing private log report to 'dtacop-root-30831-1'.
+File_Reader[1]: DataConnector Producer operator Instances: 1
+File_Reader[1]: ECI operator ID: 'File_Reader-30831'
+File_Reader[1]: Operator instance 1 processing file '../../Landing/Data_Plan_Run_1.csv'.
+Load_Data_Plan: connecting sessions
+Load_Data_Plan: preparing target table
+Load_Data_Plan: entering Acquisition Phase
+Load_Data_Plan: entering Application Phase
+Load_Data_Plan: Statistics for Target Table:  'STG_DATA_PLAN'
+Load_Data_Plan: Total Rows Sent To RDBMS:      599
+Load_Data_Plan: Total Rows Applied:            599
+Load_Data_Plan: Total Rows in Error Table 1:   0
+Load_Data_Plan: Total Rows in Error Table 2:   0
+Load_Data_Plan: Total Duplicate Rows:          0
+File_Reader[1]: Total files processed: 1.
+Load_Data_Plan: disconnecting sessions
+Load_Data_Plan: Performance metrics:
+Load_Data_Plan:     MB/sec in Acquisition phase: 0.009
+Load_Data_Plan:     Elapsed time from start to Acquisition phase:   2 second(s)
+Load_Data_Plan:     Elapsed time in Acquisition phase:   3 second(s)
+Load_Data_Plan:     Elapsed time in Application phase: < 1 second
+Load_Data_Plan:     Elapsed time from Application phase to end: < 1 second
+Load_Data_Plan: Total processor time used = '0.036001 Second(s)'
+Load_Data_Plan: Start : Wed Nov  6 05:17:02 2019
+Load_Data_Plan: End   : Wed Nov  6 05:17:07 2019
+Job step LoadRows completed successfully
+Job root completed successfully
+Job start: Wed Nov  6 05:17:02 2019
+Job end:   Wed Nov  6 05:17:07 2019
+BTEQ 16.20.00.04 Wed Nov  6 05:17:08 2019 PID: 30837
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+.LOGON dbc/Students,
+
+ *** Logon successfully completed.
+ *** Teradata Database Release is 16.20.32.01                   
+ *** Teradata Database Version is 16.20.32.01                     
+ *** Transaction Semantics are BTET.
+ *** Session Character Set Name is 'ASCII'.
+ 
+ *** Total elapsed time was 1 second.
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+EXEC StgToTrn;
+
+ *** Update completed. 599 rows changed. 
+ *** Total elapsed time was 1 second.
+
+
+ *** Insert completed. 599 rows added. 
+
+ *** Insert completed. 599 rows added. 
+
+ *** Insert completed. 4 rows added. 
+
++---------+---------+---------+---------+---------+---------+---------+----
+.QUIT
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 0 
