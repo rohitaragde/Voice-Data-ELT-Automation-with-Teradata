@@ -8,7 +8,7 @@ The data model below shows the architecture of the slipsteam ELT project we perf
 
 ![Data Model](Final_Data_Model.png)
 
-**ELT Process**
+**ELT Process**<br>
 
 The ELT process involves the following steps:<br>
 **Extract:** Data is extracted from the Slipstream dataset.<br>
