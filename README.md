@@ -8,6 +8,15 @@ The data model below shows the architecture of the slipsteam ELT project we perf
 
 ![Data Model](Final_Data_Model.png)
 
+**ELT Process**
+
+The ELT process involves the following steps:
+**Extract:** Data is extracted from the Slipstream dataset.
+**Load:** The extracted data is loaded into Teradata tables using BTEQ and TPT scripts.
+**Transform:** Data transformations are performed to address any data issues and enhance the quality of the data.
+**Load (Final):** The transformed data is loaded into the final destination table.
+**Visualization:** The data is visualized using Tableau and Vertablo for comprehensive analysis and reporting.
+
 
 
 
