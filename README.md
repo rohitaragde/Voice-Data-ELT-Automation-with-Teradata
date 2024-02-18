@@ -28,6 +28,13 @@ The repository includes the following folders and scripts where the several csv 
 **Backup:** Stores backup files.<br>
 **Logs:** Stores logs generated during the ELT process.<br>
 
+**TestCases**
+
+Test cases are documented in an Excel file to showcase the data before and after the transformations.<br>
+These test cases serve as a reference to validate the effectiveness of the transformation process.<br>
+
+
+
 
 
 
