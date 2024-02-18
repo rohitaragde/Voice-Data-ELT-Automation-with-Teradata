@@ -19,7 +19,7 @@ The ELT process involves the following steps:<br>
 
 **Scripts and Folders**
 
-The repository includes the following folders and scripts:<br>
+The repository includes the following folders and scripts where the several csv files gets stored as soon as the scripts gets executed and also there is a scripts folder which has the various set of scripts we have to perform the data load at landing and staging areas:-<br>
 
 **Archived Data:** Contains archived data files.<br>
 **Landing Data:** Holds the raw data files extracted from the Slipstream dataset.<br>
