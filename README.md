@@ -28,6 +28,15 @@ The repository includes the following folders and scripts where the several csv 
 **Backup:** Stores backup files.<br>
 **Logs:** Stores logs generated during the ELT process.<br>
 
+**Tools and Technologies**
+1) Teradata Tools and Utiities ( TTU)<br>
+2) Teradata Studio<br>
+3) VMWare<br>
+4) Teradata BTEQ<br>
+5) Teradata TPT<br>
+6) Tableau<br>
+7) Vertabelo<br>
+
 **TestCases**
 
 Test cases are documented in an Excel file to showcase the data before and after the transformations.<br>
