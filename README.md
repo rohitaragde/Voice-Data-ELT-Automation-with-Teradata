@@ -38,6 +38,11 @@ The repository includes the following folders and scripts where the several csv 
 7) Vertabelo<br>
 8) Teradata SQL Studio
 
+**Languages**
+1) Shell Scipting in Linux
+2) Teradata SQL
+3) Python
+
 **TestCases**
 
 Test cases are documented in an Excel file to showcase the data before and after the transformations.<br>
