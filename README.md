@@ -36,6 +36,7 @@ The repository includes the following folders and scripts where the several csv 
 5) Teradata TPT<br>
 6) Tableau<br>
 7) Vertabelo<br>
+8) Teradata SQL Studio
 
 **TestCases**
 
